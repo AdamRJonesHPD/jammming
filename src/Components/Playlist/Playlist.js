@@ -1,5 +1,5 @@
 import React from 'react';
-import TrackList from '../TrackList/Tracklist.js';
+import TrackList from '../TrackList/TrackList.js';
 import './Playlist.css';
 
 class Playlist extends React.Component {
@@ -7,8 +7,8 @@ class Playlist extends React.Component {
         return(
             <div className="Playlist">
                 <input defaultValue={'New Playlist'}/>
-                <div>Add a TrackList component</div>
-                <button class="Playlist-save">SAVE TO SPOTIFY</button>
+                <TrackList tracks={this.props.playlistTracks}/>
+                <button className="Playlist-save">SAVE TO SPOTIFY</button>
             </div>
         )
     }
